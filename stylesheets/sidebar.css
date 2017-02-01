@@ -17,15 +17,25 @@
   /*padding-right: 20px;*/
   overflow-y: scroll;
 }
+.sidebarMenuItem {
+  position: relative;
+  height: 50px;
+}
+
+.sidebarMenuItem:hover {
+  height: auto;
+}
 
 .sidebarMenuItem:hover .sidebarSubmenu {
   display: block;
 }
 
 .sidebarMenuItem > div {
-  widows: 300px;
+  position: relative;
+  /*widows: 300px;*/
+  width: 300px;
   height: 50px;
-  padding: 10px;
+  padding: 10px 10px 10px 60px;
   line-height: 30px;
 }
 
@@ -33,15 +43,51 @@
  background: lightgrey;
 }
 
+.sidebarMenuItem::before {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  z-index: 1px;
+  display: block;
+  width: 40px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 20px;
+  font-family: FontAwesome;
+  text-align: center;
+}
+
+.sidebarMenuItem:last-child {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+
+.sidebarMenuItem.apple::before       {content: '\f179';}
+.sidebarMenuItem.behance::before     {content: '\f1b4';}
+.sidebarMenuItem.facebook::before    {content: '\f230';}
+.sidebarMenuItem.github::before      {content: '\f092';}
+.sidebarMenuItem.trello::before      {content: '\f181';}
+.sidebarMenuItem.pinterest::before   {content: '\f0d2';}
+.sidebarMenuItem.telegram::before    {content: '\f2c6';}
+.sidebarMenuItem.tripadvisor::before {content: '\f262';}
+.sidebarMenuItem.skype::before       {content: '\f17e';}
+.sidebarMenuItem.vk::before          {content: '\f189';}
+.sidebarMenuItem.mode::before          {content: '\f14a';}
+
 .sidebarSubmenu {
   display: none;
 }
 
 .sidebarSubmenuItem {
   height: 50px;
-  padding: 10px 10px 10px 20px;
+  padding: 10px 10px 10px 60px;
   line-height: 30px;
 }
 .sidebarSubmenuItem:hover {
   background: lightgrey;
+}
+.sidebarSubmenuItem:first-child {
+  display: none;
 }

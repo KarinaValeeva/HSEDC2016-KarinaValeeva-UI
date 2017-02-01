@@ -42,10 +42,38 @@
 }
 
 .userMenu li {
+  position: relative;
+  z-index: 1;
   padding: 0 10px;
   line-height: 50px;
+  cursor: pointer;
 }
 
 .userMenu li:hover {
 background: lightgrey;
+}
+
+
+.userMenu ul::before {
+  display: block;
+  position: absolute;
+  top: -8px;
+  right: 14px;
+  content: '';
+  width: 20px;
+  height: 20px;
+  background: white;
+  box-shadow: 0 0 5px 0 rgba(0,0,0,.15);
+  transform: rotate(45deg);
+}
+
+.userMenu ul::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  content: '';
+  background: white;
+  width: 60px;
+  height: 60px;
 }
