@@ -2,10 +2,11 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=cyrillic');
 @import 'font-awesome.css';
 
-@import 'basics.css';
+@import 'basic.css';
+
 @import 'content.css';
-@import 'content_compact.css';
 @import 'menubar.css';
-@import 'menubar_compact.css';
 @import 'sidebar.css';
+@import 'content_compact.css';
+@import 'menubar_compact.css';
 @import 'sidebar_compact.css';
